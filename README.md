@@ -25,3 +25,18 @@ In NoTN a specific type of Data Provider is recognized: Shipper. To distinguish 
 ## NoTN Authorization Registry
 
 To improve interoperability of parties with NoTN, NoTN provides templates for delegation evidence. These are maintained [here](https://github.com/Network-of-Trusted-Networks/delegation-evidence-templates).
+
+## NoTN Data Providers and Shippers
+
+Data Providers and Shippers must (in line with iSHARE) register their capabilities endpoint in the Association Registry. The [capabilities endpoint](https://dev.ishare.eu/version-2.0.1/ishare-satellite-role/capabilities) provided must list the [NOTN-defined API-requirements](https://network-of-trusted-networks.github.io/api-requirements/) under supported_features->public. The following table explains the IDs that must be used to expose the feature (the ID is the same as the operationId in the OpenAPI specifications).
+
+| NoTN API feature | id to be used in capabilities feature |
+| ---------------- | ------------------------------------- |
+| /webhooks/shipment-subscriptions POST | subscribeToShipments |
+| /webhooks/event-subscriptions POST | subscribeToEvents |
+| /webhooks/event-subscriptions/{subscriptionId} GET | getEventsSubscription |
+| /webhooks/event-subscriptions/{subscriptionId} DELETE | deleteEventsSubscription |
+| /webhooks/shipment-subscriptions/{subscriptionId} GET | getShipmentsSubscription |
+| /webhooks/shipment-subscriptions/{subscriptionId} DELETE | deleteShipmentsSubscription |
+| /shipments/{id} GET | getShipmentDetails |
+| /events/{eventId} GET | getEventDetails |
