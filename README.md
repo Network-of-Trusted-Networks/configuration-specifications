@@ -22,9 +22,19 @@ The following mapping describes the relationships between the roles used in the 
 
 In NoTN a specific type of Data Provider is recognized: Shipper. To distinguish with other Data Providers in the NoTN Association Registry, the "tags" field will be used. All shippers will be marked with the tag "notn_shipper". This allows Data Consumers to obtain a list of Shippers from the Association Registry, to request subscription to new shipments.
 
+### Endpoint
+
+The base endpoint of the Association Registry is: `https://dilsat1-mw.pg.bdinetwork.org/`. This means that (for example) the parties endpoint is available on `https://dilsat1-mw.pg.bdinetwork.org/parties`.
+
 ## NoTN Authorization Registry
 
 To improve interoperability of parties with NoTN, NoTN provides templates for delegation evidence. These are maintained [here](https://github.com/Network-of-Trusted-Networks/delegation-evidence-templates).
+
+### Endpoint
+
+The base endpoint of the Authorization Registry is: `https://ar.isharetest.net/`. This means that the delegation endpoint is available on `https://ar.isharetest.net/delegation`.
+
+This Authorization Registry allows for an automated creation of policies using the /policy endpoint. More information on [the OpenAPI specifications of the /policy endpoint](https://ar.isharetest.net/swagger/index.html#/Policy/post_policy).
 
 ## NoTN Data Providers and Shippers
 
