@@ -26,6 +26,10 @@ In NoTN a specific type of Data Provider is recognized: Shipper. To distinguish 
 
 The base endpoint of the Association Registry is: `https://dilsat1-mw.pg.bdinetwork.org/`. This means that (for example) the parties endpoint is available on `https://dilsat1-mw.pg.bdinetwork.org/parties`.
 
+### Dataspace identifier
+
+The identifier for the dataspace is `EU.DS.MOB.NL.NOTN.PDC`.
+
 ## NoTN Authorization Registry
 
 To improve interoperability of parties with NoTN, NoTN provides templates for delegation evidence. These are maintained [here](https://github.com/Network-of-Trusted-Networks/delegation-evidence-templates).
