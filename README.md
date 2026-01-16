@@ -81,3 +81,79 @@ Data Providers and Shippers must (in line with iSHARE) register their capabiliti
 | /webhooks/shipment-subscriptions/{subscriptionId} DELETE | deleteShipmentsSubscription |
 | /shipments/{id} GET | getShipmentDetails |
 | /events/{eventId} GET | getEventDetails |
+
+### Example response from capabilities endpoint
+
+The following is an example response for a party that provides both Shipper endpoints and Data Provider endpoints. The response itself must be send as signed JWT with the following example payload:
+
+```json
+{
+    "capabilities_info": {
+        "party_id": "EU.EORI.EXAMPLE",
+        "ishare_roles": [
+            {
+                "role": "ServiceProvider"
+            }
+        ],
+        "supported_versions": [
+            {
+                "version": "1.0",
+                "supported_features": [
+                    {
+                        "public": [
+                            {
+                                "id": "subscribeToShipments",
+                                "feature": "Subscribe to new shipments",
+                                "description": "Request a subscription for new shipments (HTTP POST)",
+                                "url": "https://example.com/webhooks/shipment-subscriptions"
+                            },
+                            {
+                                "id": "subscribeToEvents",
+                                "feature": "Subscribe to events",
+                                "description": "Request a subscription for new events (HTTP POST)",
+                                "url": "https://example.com/webhooks/event-subscriptions"
+                            },
+                            {
+                                "id": "getEventsSubscription",
+                                "feature": "Get event subscription",
+                                "description": "Get details of event subscription (HTTP GET)",
+                                "url": "https://example.com/webhooks/event-subscriptions"
+                            },
+                            {
+                                "id": "deleteEventsSubscription",
+                                "feature": "Delete event subscription",
+                                "description": "Delete an existing event subscription (HTTP DELETE)",
+                                "url": "https://example.com/webhooks/event-subscriptions"
+                            },
+                            {
+                                "id": "getShipmentsSubscription",
+                                "feature": "Get shipment subscription",
+                                "description": "Get details of shipment subscription (HTTP GET)",
+                                "url": "https://example.com/webhooks/shipment-subscriptions"
+                            },
+                            {
+                                "id": "deleteShipmentsSubscription",
+                                "feature": "Delete shipment subscription",
+                                "description": "Delete an existing shipment subscription (HTTP DELETE)",
+                                "url": "https://example.com/webhooks/shipment-subscriptions"
+                            },
+                            {
+                                "id": "getShipmentDetails",
+                                "feature": "Get shipment details",
+                                "description": "Request all details of a shipment after receiving the event on callback URL (HTTP GET)",
+                                "url": "https://example.com/shipments"
+                            },
+                            {
+                                "id": "getEventDetails",
+                                "feature": "Get event details",
+                                "description": "equest all details of an event after receiving the event on callback URL (HTTP GET)",
+                                "url": "https://example.com/events"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
