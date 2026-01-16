@@ -26,6 +26,25 @@ In NoTN a specific type of Data Provider is recognized: Shipper. To distinguish 
 
 The base endpoint of the Association Registry is: `https://dilsat1-mw.pg.bdinetwork.org/`. This means that (for example) the parties endpoint is available on `https://dilsat1-mw.pg.bdinetwork.org/parties`.
 
+### Example request to parties endpoint
+
+List all participants of the NoTN dataspace:
+
+```
+https://dilsat1-mw.pg.bdinetwork.org/parties?active_only=true&dataSpaceID=EU.DS.MOB.NL.NOTN.PDC
+```
+
+List all Data Providers in the NoTN dataspace:
+```
+https://dilsat1-mw.pg.bdinetwork.org/parties?active_only=true&role=ServiceProvider&dataSpaceID=EU.DS.MOB.NL.NOTN.PDC
+```
+
+List all shippers in the NoTN dataspace:
+
+```
+https://dilsat1-mw.pg.bdinetwork.org/parties?active_only=true&tags=*notn_shipper&dataSpaceID=EU.DS.MOB.NL.NOTN.PDC
+```
+
 ### Public certificate
 
 The X.509 certificate (DER format, Base64 encoded)  of this Association Registry is:
