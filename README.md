@@ -105,49 +105,57 @@ The following is an example response for a party that provides both Shipper endp
                                 "id": "subscribeToShipments",
                                 "feature": "Subscribe to new shipments",
                                 "description": "Request a subscription for new shipments (HTTP POST)",
-                                "url": "https://example.com/webhooks/shipment-subscriptions"
+                                "url": "https://example.com/webhooks/shipment-subscriptions",
+                                "token_endpoint": "<token-endpoint-url>"
                             },
                             {
                                 "id": "subscribeToEvents",
                                 "feature": "Subscribe to events",
                                 "description": "Request a subscription for new events (HTTP POST)",
-                                "url": "https://example.com/webhooks/event-subscriptions"
+                                "url": "https://example.com/webhooks/event-subscriptions",
+                                "token_endpoint": "<token-endpoint-url>"
                             },
                             {
                                 "id": "getEventsSubscription",
                                 "feature": "Get event subscription",
                                 "description": "Get details of event subscription (HTTP GET)",
-                                "url": "https://example.com/webhooks/event-subscriptions"
+                                "url": "https://example.com/webhooks/event-subscriptions",
+                                "token_endpoint": "<token-endpoint-url>"
                             },
                             {
                                 "id": "deleteEventsSubscription",
                                 "feature": "Delete event subscription",
                                 "description": "Delete an existing event subscription (HTTP DELETE)",
-                                "url": "https://example.com/webhooks/event-subscriptions"
+                                "url": "https://example.com/webhooks/event-subscriptions",
+                                "token_endpoint": "<token-endpoint-url>"
                             },
                             {
                                 "id": "getShipmentsSubscription",
                                 "feature": "Get shipment subscription",
                                 "description": "Get details of shipment subscription (HTTP GET)",
-                                "url": "https://example.com/webhooks/shipment-subscriptions"
+                                "url": "https://example.com/webhooks/shipment-subscriptions",
+                                "token_endpoint": "<token-endpoint-url>"
                             },
                             {
                                 "id": "deleteShipmentsSubscription",
                                 "feature": "Delete shipment subscription",
                                 "description": "Delete an existing shipment subscription (HTTP DELETE)",
-                                "url": "https://example.com/webhooks/shipment-subscriptions"
+                                "url": "https://example.com/webhooks/shipment-subscriptions",
+                                "token_endpoint": "<token-endpoint-url>"
                             },
                             {
                                 "id": "getShipmentDetails",
                                 "feature": "Get shipment details",
                                 "description": "Request all details of a shipment after receiving the event on callback URL (HTTP GET)",
-                                "url": "https://example.com/shipments"
+                                "url": "https://example.com/shipments",
+                                "token_endpoint": "<token-endpoint-url>"
                             },
                             {
                                 "id": "getEventDetails",
                                 "feature": "Get event details",
                                 "description": "equest all details of an event after receiving the event on callback URL (HTTP GET)",
-                                "url": "https://example.com/events"
+                                "url": "https://example.com/events",
+                                "token_endpoint": "<token-endpoint-url>"
                             }
                         ]
                     }
